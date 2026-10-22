@@ -1,5 +1,7 @@
 # Bhavya's Digital Platform Journal
 
+**Live site:** https://journalbhavya.vercel.app
+
 A website with one tab per guest speaker session in ESSEC Digital Platforms.
 Each tab is a blog. Every key idea in a blog is a 🚩 checkpoint. When a blog is
 marked complete, its **Checkpoint Run** game unlocks: an animated me runs a
@@ -36,9 +38,10 @@ Then commit and push. Vercel updates the live site automatically.
 
 ## Making the avatar look like me
 
-The avatar is me in a 70s look: long flowy brown hair, square clear glasses, a
-mustard striped top with bell sleeves, flared jeans and platform boots. To tweak
-it, change the variables under "Me" at the top of `styles.css`. Fonts and colours match my portfolio (Instrument Serif,
+The avatar is a flat 2D, front-facing me: dark wavy bob, thick brows, big
+eyes, gold hoop earrings and clear square glasses, in a pink puffer jacket,
+white tee, ripped jeans and white boots. To tweak it, change the variables
+under "Me" at the top of `styles.css`. Fonts and colours match my portfolio (Instrument Serif,
 Inter Tight, IBM Plex Mono; purple #7211af, lilac, cream, cyan doodles).
 
 ## Kept separate from my portfolio
@@ -46,8 +49,8 @@ Inter Tight, IBM Plex Mono; purple #7211af, lilac, cream, cyan doodles).
 This is its own project, not part of the portfolio:
 
 - its own folder (never inside the portfolio folder)
-- its own GitHub repo, e.g. `bhavyas-digital-platform-journal` (not `bhavya-s-portfolio`)
-- its own Vercel project and link (not `hello-bhavya-portfolio.vercel.app`)
+- its own GitHub repo, `Bhavya-s-Digital-Journal` (not `bhavya-s-portfolio`)
+- its own Vercel project and link, `journalbhavya.vercel.app` (not `hello-bhavya-portfolio.vercel.app`)
 - local preview runs on port 5173 (the portfolio uses 3000)
 
 ## Run it on my computer

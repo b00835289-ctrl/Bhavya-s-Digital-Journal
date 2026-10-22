@@ -27,48 +27,80 @@
 
   const STATUS = { upcoming: "Coming up", draft: "Writing…", complete: "Complete" };
 
-  // Animated me: long flowy brown hair, square clear glasses, a 70s striped top
-  // with bell sleeves, flared jeans and platform boots. Colours live in styles.css.
+  // Animated me, flat 2D and front-facing: dark wavy bob, thick brows, big eyes,
+  // gold hoops and glasses; pink puffer jacket, white tee, ripped jeans and white
+  // boots. Colours live in styles.css.
   const AVATAR = `
-<svg class="bhavya" viewBox="0 0 64 96" aria-hidden="true">
+<svg class="bhavya" viewBox="0 0 60 120" aria-hidden="true">
   <g class="hair-back">
-    <path d="M22 10 C30 3 44 4 47 14 C48 19 46 23 44 25 L33 34 C31 42 30 50 28 57 C26 61 22 57 20 60 C17 62 15 58 15 55 C11 52 13 47 11 43 C9 37 11 31 10 26 C9 18 15 12 22 10 Z" fill="var(--hair)"/>
-    <path d="M14 24 C12 32 15 40 13 48 M19 27 C17 36 20 45 18 55 M24 32 C23 40 25 48 23 56" stroke="var(--hair-light)" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+    <path d="M30 6.5 C18.5 6.5 14.5 15 15.5 23 C15.8 27 13.5 29.5 12.8 33 C14.5 32.5 15.5 33.5 15.2 35.5 C17.5 34 19 35.5 20 37.5 C21.5 35 23.5 34.5 24 32 L24 28 L36 28 L36 32 C36.5 34.5 38.5 35 40 37.5 C41 35.5 42.5 34 44.8 35.5 C44.5 33.5 45.5 32.5 47.2 33 C46.5 29.5 44.2 27 44.5 23 C45.5 15 41.5 6.5 30 6.5 Z" fill="var(--hair)"/>
+    <path d="M18 18 C16.5 24 17 29 15.5 33 M42 18 C43.5 24 43 29 44.5 33 M21 26 C20.5 30 21 33 20 36 M39 26 C39.5 30 39 33 40 36" stroke="var(--hair-dark)" stroke-width=".7" fill="none" stroke-linecap="round"/>
   </g>
   <g class="limb leg back">
-    <rect x="27" y="81" width="13" height="5.5" rx="1.5" fill="var(--boot-dark)"/><rect x="26.5" y="86" width="14" height="3" rx="1" fill="var(--boot-sole)"/>
-    <path d="M29 59 H36 L39 83 H27 Z" fill="var(--denim-dark)"/>
+    <path d="M22.5 59 H29.6 L29.2 100 H23 Z" fill="var(--jeans)"/>
+    <path d="M27.5 60 L27.2 100" stroke="var(--jeans-dark)" stroke-width=".6"/>
+    <ellipse cx="26" cy="81" rx="2" ry="1.3" fill="var(--skin)"/>
+    <path d="M23.8 80.4 l.7 -.6 l.6 .5 l.7 -.6 l.6 .5 l.7 -.6 l.6 .5 l.7 -.5 M23.8 81.8 l.7 .5 l.6 -.4 l.7 .5 l.6 -.4 l.7 .5 l.6 -.4 l.7 .4" stroke="var(--fray)" stroke-width=".55" fill="none"/>
+    <rect x="22.4" y="98" width="7.4" height="8" rx="1.5" fill="var(--boot)"/>
+    <path d="M21.6 104.5 H30.6 Q31.8 104.5 31.8 106 V107.5 H21.6 Z" fill="var(--boot)"/>
+    <rect x="21.4" y="107.2" width="10.6" height="2.2" rx=".8" fill="var(--boot-sole)"/>
+    <path d="M24.3 100 h3.6 M24.3 102 h3.6 M24.3 104 h3.6" stroke="var(--boot-shade)" stroke-width=".5"/>
   </g>
-  <g class="limb arm back"><path d="M29.5 37 H36 L38.5 55 H27 Z" fill="var(--top-shade)"/><circle cx="32.7" cy="56.5" r="2.4" fill="var(--skin-dark)"/></g>
-  <rect x="31" y="30" width="6" height="8" fill="var(--skin-dark)"/>
-  <rect x="22" y="35" width="21" height="22" rx="7" fill="var(--top)"/>
-  <rect x="22.4" y="44" width="20.2" height="3" fill="var(--top-stripe-1)"/>
-  <rect x="22.4" y="48.5" width="20.2" height="2" fill="var(--top-stripe-2)"/>
-  <path d="M28 35 L32.5 42 L37 35 Z" fill="var(--skin)"/>
-  <path d="M27.5 35 L24 40 L30 38.5 Z M37.5 35 L41 40 L35 38.5 Z" fill="var(--top-collar)"/>
-  <rect x="22.5" y="55" width="20" height="7" rx="3" fill="var(--denim)"/>
-  <rect x="22.5" y="55" width="20" height="2.4" fill="var(--belt)"/><rect x="31" y="54.6" width="3.4" height="3.2" rx=".6" fill="none" stroke="#e8c46a" stroke-width=".9"/>
   <g class="limb leg front">
-    <rect x="27" y="81" width="13" height="5.5" rx="1.5" fill="var(--boot)"/><rect x="26.5" y="86" width="14" height="3" rx="1" fill="var(--boot-sole)"/>
-    <path d="M29 59 H36 L39 83 H27 Z" fill="var(--denim)"/>
-    <path d="M32.5 66 V82" stroke="var(--denim-dark)" stroke-width=".7" stroke-dasharray="1.4 1.2"/>
+    <path d="M30.4 59 H37.5 L37 100 H30.8 Z" fill="var(--jeans)"/>
+    <path d="M32.5 60 L32.8 100" stroke="var(--jeans-dark)" stroke-width=".6"/>
+    <ellipse cx="34" cy="69" rx="1.8" ry="1.1" fill="var(--skin)"/>
+    <path d="M32 68.5 l.7 -.5 l.6 .4 l.7 -.5 l.6 .4 l.7 -.5 M32 69.6 l.7 .4 l.6 -.4 l.7 .4 l.6 -.4 l.7 .4" stroke="var(--fray)" stroke-width=".55" fill="none"/>
+    <ellipse cx="34" cy="83" rx="2" ry="1.3" fill="var(--skin)"/>
+    <path d="M31.8 82.4 l.7 -.6 l.6 .5 l.7 -.6 l.6 .5 l.7 -.6 l.6 .5 l.7 -.5 M31.8 83.8 l.7 .5 l.6 -.4 l.7 .5 l.6 -.4 l.7 .5 l.6 -.4 l.7 .4" stroke="var(--fray)" stroke-width=".55" fill="none"/>
+    <rect x="30.2" y="98" width="7.4" height="8" rx="1.5" fill="var(--boot)"/>
+    <path d="M29.4 104.5 H38.4 Q39.6 104.5 39.6 106 V107.5 H29.4 Z" fill="var(--boot)"/>
+    <rect x="29.2" y="107.2" width="10.6" height="2.2" rx=".8" fill="var(--boot-sole)"/>
+    <path d="M32.1 100 h3.6 M32.1 102 h3.6 M32.1 104 h3.6" stroke="var(--boot-shade)" stroke-width=".5"/>
   </g>
-  <g class="limb arm front"><path d="M29.5 37 H36 L38.5 55 H27 Z" fill="var(--top)"/><path d="M27.6 51 H38" stroke="var(--top-stripe-1)" stroke-width="1.6"/><circle cx="32.7" cy="56.5" r="2.4" fill="var(--skin)"/></g>
-  <circle cx="35" cy="22" r="12" fill="var(--skin)"/>
-  <path d="M22.5 17 C20 24 21 32 23.5 38 C25 31 25 24 26 19 Z" fill="var(--hair)"/>
-  <path d="M22 19 C21 9 34 5 42 8.5 C46.5 10.5 48 15 47 20 C43 14 37 12.5 31 15 C28 16.5 25 18 22 19 Z" fill="var(--hair)"/>
-  <path d="M30 10 C34 9 39 10 43 13" stroke="var(--hair-light)" stroke-width="1" fill="none" stroke-linecap="round"/>
-  <g class="flower">
-    <ellipse cx="24" cy="12" rx="2.4" ry="1.4" fill="var(--flower)"/><ellipse cx="24" cy="12" rx="2.4" ry="1.4" fill="var(--flower)" transform="rotate(72 24 14)"/><ellipse cx="24" cy="12" rx="2.4" ry="1.4" fill="var(--flower)" transform="rotate(144 24 14)"/><ellipse cx="24" cy="12" rx="2.4" ry="1.4" fill="var(--flower)" transform="rotate(216 24 14)"/><ellipse cx="24" cy="12" rx="2.4" ry="1.4" fill="var(--flower)" transform="rotate(288 24 14)"/>
-    <circle cx="24" cy="14" r="1.3" fill="#ffc93c"/>
+  <rect x="22.3" y="55" width="15.4" height="7" rx="2" fill="var(--jeans)"/>
+  <path d="M30 55.5 V62" stroke="var(--jeans-dark)" stroke-width=".6"/>
+  <rect x="27.5" y="27" width="5" height="7" fill="var(--skin-shade)"/>
+  <rect x="22.5" y="33" width="15" height="23" rx="3" fill="var(--tee)"/>
+  <path d="M27 33.2 Q30 36 33 33.2" stroke="var(--skin-shade)" stroke-width="1.6" fill="none"/>
+  <g class="limb arm back">
+    <path d="M20 34.5 C15.5 36 14.3 43 14 49.5 L13.4 56.5 L18.8 57.5 L19.8 50 L22.5 39 Z" fill="var(--jacket)"/>
+    <path d="M14.6 43.5 Q17.3 44.5 20.6 43.5 M14 50 Q16.7 51 19.6 50" stroke="var(--jacket-shade)" stroke-width=".7" fill="none"/>
+    <rect x="13" y="55.5" width="6.2" height="3" rx="1.2" fill="var(--jacket-shade)"/>
+    <ellipse cx="15.8" cy="60.6" rx="1.9" ry="2.3" fill="var(--skin)"/>
   </g>
-  <path d="M29.8 17.4 Q32 16.4 34.2 17.4 M38.3 17.4 Q40.5 16.4 42.7 17.4" stroke="var(--hair)" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-  <g class="eyes"><ellipse cx="32" cy="22.5" rx="1.6" ry="2.1" fill="#2a1a12"/><ellipse cx="40.5" cy="22.5" rx="1.6" ry="2.1" fill="#2a1a12"/><circle cx="32.5" cy="21.7" r=".55" fill="#fff"/><circle cx="41" cy="21.7" r=".55" fill="#fff"/></g>
-  <g fill="var(--lens)" stroke="var(--frames)" stroke-width="1.1"><rect x="28" y="19" width="8" height="7" rx="1.4"/><rect x="36.6" y="19" width="8" height="7" rx="1.4"/></g>
-  <path d="M36 21.6 H36.6 M28 21.4 L24.5 20.6" stroke="var(--frames)" stroke-width="1.1" fill="none" stroke-linecap="round"/>
-  <path d="M43.6 25.6 q1.2 1 0 2" stroke="var(--skin-dark)" stroke-width="1" fill="none" stroke-linecap="round"/>
-  <circle cx="30" cy="28.3" r="1.8" fill="#ff7f8f" opacity=".45"/>
-  <path d="M34 28.6 Q38 33.4 42 28.6 Z" fill="#fff" stroke="#6a2626" stroke-width="1.2" stroke-linejoin="round"/>
+  <g class="limb arm front">
+    <path d="M40 34.5 C44.5 36 45.7 43 46 49.5 L46.6 56.5 L41.2 57.5 L40.2 50 L37.5 39 Z" fill="var(--jacket)"/>
+    <path d="M45.4 43.5 Q42.7 44.5 39.4 43.5 M46 50 Q43.3 51 40.4 50" stroke="var(--jacket-shade)" stroke-width=".7" fill="none"/>
+    <rect x="40.8" y="55.5" width="6.2" height="3" rx="1.2" fill="var(--jacket-shade)"/>
+    <ellipse cx="44.2" cy="60.6" rx="1.9" ry="2.3" fill="var(--skin)"/>
+  </g>
+  <path d="M25.5 33 L21 34 C18.8 35 18 38 18.2 42 L18.8 57.5 L27 57.5 L27 41 Z" fill="var(--jacket)"/>
+  <path d="M34.5 33 L39 34 C41.2 35 42 38 41.8 42 L41.2 57.5 L33 57.5 L33 41 Z" fill="var(--jacket)"/>
+  <path d="M18.4 45 Q22.5 46.3 27 45 M18.6 51 Q22.7 52.3 27 51 M41.6 45 Q37.5 46.3 33 45 M41.4 51 Q37.3 52.3 33 51" stroke="var(--jacket-shade)" stroke-width=".7" fill="none"/>
+  <path d="M27 41 V57.5 M33 41 V57.5" stroke="var(--jacket-light)" stroke-width=".8"/>
+  <path d="M18.7 55 H27 V57.6 H18.8 Z M33 55 H41.3 L41.2 57.6 H33 Z" fill="var(--jacket-shade)"/>
+  <path d="M25.6 33.2 L22 27.5 L23.5 33 L27 41 Z M34.4 33.2 L38 27.5 L36.5 33 L33 41 Z" fill="var(--jacket-shade)"/>
+  <path d="M25.6 33.2 L22.6 28 L27.3 31.2 Z M34.4 33.2 L37.4 28 L32.7 31.2 Z" fill="var(--jacket)"/>
+  <ellipse cx="21.6" cy="21.5" rx="1.6" ry="2.2" fill="var(--skin-shade)"/>
+  <ellipse cx="38.4" cy="21.5" rx="1.6" ry="2.2" fill="var(--skin-shade)"/>
+  <circle cx="21.4" cy="25.6" r="1.9" fill="none" stroke="var(--gold)" stroke-width=".7"/>
+  <circle cx="38.6" cy="25.6" r="1.9" fill="none" stroke="var(--gold)" stroke-width=".7"/>
+  <ellipse cx="30" cy="19.8" rx="8.2" ry="9.6" fill="var(--skin)"/>
+  <path d="M30 7.6 C23.5 8.4 20.6 13.8 21.3 21.5 C23.6 17.6 26.8 13.4 30 11.2 C33.2 13.4 36.4 17.6 38.7 21.5 C39.4 13.8 36.5 8.4 30 7.6 Z" fill="var(--hair)"/>
+  <path d="M32.6 11.4 C36 14.6 38.4 18.6 37.6 24.5" stroke="var(--hair)" stroke-width="1" fill="none" stroke-linecap="round"/>
+  <path d="M24.6 16.6 Q26.7 15.2 28.6 16.3 M31.4 16.3 Q33.3 15.2 35.4 16.6" stroke="var(--hair-dark)" stroke-width="1.05" fill="none" stroke-linecap="round"/>
+  <g class="eyes">
+    <ellipse cx="26.6" cy="19.6" rx="1.95" ry="1.65" fill="#fff"/><ellipse cx="33.4" cy="19.6" rx="1.95" ry="1.65" fill="#fff"/>
+    <circle cx="26.8" cy="19.7" r="1.3" fill="#2a1a14"/><circle cx="33.2" cy="19.7" r="1.3" fill="#2a1a14"/>
+    <circle cx="27.2" cy="19.2" r=".42" fill="#fff"/><circle cx="33.6" cy="19.2" r=".42" fill="#fff"/>
+    <path d="M24.5 18.6 L24 18 M35.5 18.6 L36 18" stroke="#2a1a14" stroke-width=".5" stroke-linecap="round"/>
+  </g>
+  <g fill="var(--lens)" stroke="var(--frames)" stroke-width=".6"><rect x="23.7" y="17.3" width="5.8" height="4.6" rx="1.2"/><rect x="30.5" y="17.3" width="5.8" height="4.6" rx="1.2"/></g>
+  <path d="M29.5 19.2 H30.5 M23.7 19 L22.2 18.6 M36.3 19 L37.8 18.6" stroke="var(--frames)" stroke-width=".6" stroke-linecap="round"/>
+  <ellipse cx="30" cy="23" rx="1.1" ry=".8" fill="var(--skin-shade)"/>
+  <ellipse cx="25.3" cy="24.2" rx="1.7" ry="1" fill="var(--blush)" opacity=".6"/><ellipse cx="34.7" cy="24.2" rx="1.7" ry="1" fill="var(--blush)" opacity=".6"/>
+  <path d="M27.4 25.6 Q30 27.8 32.6 25.6 Q30 26.5 27.4 25.6 Z" fill="var(--lips)"/>
 </svg>`;
 
   // Hand-drawn sparkle, like the doodles on my Instagram posts.
@@ -279,7 +311,7 @@
         o.className = "orb";
         o.hidden = opt === undefined;
         o.textContent = opt === undefined ? "" : cp.options[opt];
-        o.style.bottom = `calc(${LANES[i]}% + 26px)`;
+        o.style.bottom = `calc(${LANES[i]}% + var(--orb-lift))`;
         o.style.zIndex = 20 + i * 2 + 1;
       });
       x = stage.clientWidth + 60;
