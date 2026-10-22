@@ -3,7 +3,7 @@
 **Live site:** https://journalbhavya.vercel.app
 
 A website with one tab per guest speaker session in ESSEC Digital Platforms.
-Each tab is a blog. Every key idea in a blog is a 🚩 checkpoint. When a blog is
+Each tab is a blog. Every key idea in a blog is a ✦ checkpoint. When a blog is
 marked complete, its **Checkpoint Run** game unlocks: an animated me runs a
 track and switches lanes to collect the right answer at every checkpoint.
 
