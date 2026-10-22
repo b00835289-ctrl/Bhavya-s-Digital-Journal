@@ -36,11 +36,9 @@ Then commit and push. Vercel updates the live site automatically.
 
 ## Making the avatar look like me
 
-The avatar is an original character inspired by a mix of Mirabel (Encanto) and
-Moana: big dark curls, round green glasses, an embroidered blouse, a flower
-behind the ear, a shell necklace and a tapa-pattern skirt. To tweak it, change
-the variables under "Me (Mirabel x Moana mix)" at the top of `styles.css`
-(`--hair`, `--skin`, `--frames`, `--skirt`, `--flower`...). Fonts and colours match my portfolio (Instrument Serif,
+The avatar is me in a 70s look: long flowy brown hair, square clear glasses, a
+mustard striped top with bell sleeves, flared jeans and platform boots. To tweak
+it, change the variables under "Me" at the top of `styles.css`. Fonts and colours match my portfolio (Instrument Serif,
 Inter Tight, IBM Plex Mono; purple #7211af, lilac, cream, cyan doodles).
 
 ## Kept separate from my portfolio

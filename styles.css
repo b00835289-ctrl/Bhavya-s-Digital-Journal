@@ -15,23 +15,25 @@
   --good: #13795a;
   --bad: #c2341f;
 
-  /* Me (Mirabel x Moana mix): change these to tweak the avatar */
+  /* Me: change these to tweak the avatar */
   --skin: #e2a77f;
   --skin-dark: #cc8e66;
-  --hair: #2a1712;
-  --hair-light: #7a3b22;
-  --frames: #3fa34d;
-  --blouse: #fbf6ec;
-  --blouse-shade: #e9e0d0;
-  --embroidery-1: #e94e77;
-  --embroidery-2: #f5a623;
-  --embroidery-3: #2bb38a;
-  --embroidery-4: #7211af;
-  --skirt: #17807f;
-  --skirt-band: #f3d9a4;
-  --shell: #6bd3e2;
+  --hair: #6b3e26;
+  --hair-light: #9c6342;
+  --frames: rgba(205, 196, 186, 0.95);   /* clear square glasses */
+  --lens: rgba(220, 240, 255, 0.22);
+  --top: #e3a33a;          /* 70s mustard */
+  --top-shade: #c98a2a;
+  --top-stripe-1: #d9622b;
+  --top-stripe-2: #7a3e1d;
+  --top-collar: #fbf6ec;
+  --denim: #4a6fa5;
+  --denim-dark: #35548a;
+  --belt: #6b3a1e;
+  --boot: #7a4424;
+  --boot-dark: #5f331a;
+  --boot-sole: #3a2014;
   --flower: #ffe3ea;
-  --sandal: #8b4a2b;
 
   --serif: "Instrument Serif", Georgia, serif;
   --sans: "Inter Tight", system-ui, sans-serif;
@@ -285,7 +287,6 @@ kbd { display: inline-block; padding: 1px 7px; border-radius: 6px; border: 1.5px
 /* ── Avatar animation ──────────────────────────────────────────────────── */
 .bhavya { display: block; width: 100%; height: auto; overflow: visible; }
 .bhavya .leg { transform-origin: 32.5px 60px; }
-.bhavya .skirt { transform-origin: 32.5px 50px; }
 .bhavya .arm { transform-origin: 32.5px 40px; }
 .bhavya .hair-back { transform-origin: 32px 14px; }
 .bhavya .eyes { animation: blink 4s infinite; transform-origin: 35px 24px; }
@@ -294,8 +295,6 @@ kbd { display: inline-block; padding: 1px 7px; border-radius: 6px; border: 1.5px
 .moving .bhavya .leg.front, .moving .bhavya .arm.back { animation: swingA 0.45s ease-in-out infinite; }
 .moving .bhavya .leg.back, .moving .bhavya .arm.front { animation: swingB 0.45s ease-in-out infinite; }
 .moving .bhavya .hair-back { animation: sway 0.45s ease-in-out infinite; }
-.moving .bhavya .skirt { animation: flutter 0.225s ease-in-out infinite alternate; }
-@keyframes flutter { to { transform: skewX(-6deg); } }
 .moving .runner .bhavya { animation: bounce 0.225s ease-in-out infinite alternate; }
 @keyframes swingA { 0%, 100% { transform: rotate(32deg); } 50% { transform: rotate(-32deg); } }
 @keyframes swingB { 0%, 100% { transform: rotate(-32deg); } 50% { transform: rotate(32deg); } }
